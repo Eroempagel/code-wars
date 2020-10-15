@@ -78,3 +78,71 @@ document.body.innerHTML +=
   "</strong>" +
   "</br>";
 document.body.innerHTML += "</br>" + doubleInteger(6) + "</br>";
+
+/**  KATA ⮕ Student's Final Grade
+ ***
+ ***
+ **/
+
+//function finalGrade (exam, projects) {
+//    if(exam > 90 || projects > 10) return 100;
+//    if(exam > 75 && projects >= 5) return 90;
+//    if(exam > 50 && projects >= 2) return 75;
+//    return 0;
+//  }
+
+function finalGrade(exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100;
+  }
+
+  if (exam > 75 && projects >= 5) {
+    return 90;
+  }
+
+  if (exam > 50 && projects >= 2) {
+    return 75;
+  }
+
+  return 0;
+}
+
+/**  KATA ⮕ Century From Year (8kyu)
+ *** Description:
+ *** The first century spans from the year 1 up to and including the year 100,
+ *** The second - from the year 101 up to and including the year 200, etc.
+ ***
+ **/
+
+//centuryFromYear(1705)  returns (18)
+//centuryFromYear(1900)  returns (19)
+//centuryFromYear(1601)  returns (17)
+//centuryFromYear(2000)  returns (20)
+
+//const century = Math.floor(year/100);
+//return year % 100 > 0 ? century +1 : century;
+
+//function century(year) {
+//return year % 100 > 0 ? Math.floor(year/ 100) +1 : Math.floor(year / 100);
+//}
+
+//function century(year) {
+//   return Math.ceil(year/100); //using ceiling method to round up to nearest century (100)
+//  }
+
+function century(year) {
+  const century = Math.floor(year / 100);
+  const decade = year % 100;
+
+  if (decade > 0) {
+    return century + 1;
+  }
+  return century;
+}
+
+document.body.innerHTML +=
+  "</br>" + "<strong>" + "Century From Year (8kyu)" + "</strong>" + "</br>";
+document.body.innerHTML += "</br>" + century(1705) + "</br>";
+document.body.innerHTML += "</br>" + century(1900) + "</br>";
+document.body.innerHTML += "</br>" + century(1601) + "</br>";
+document.body.innerHTML += "</br>" + century(2000) + "</br>";
