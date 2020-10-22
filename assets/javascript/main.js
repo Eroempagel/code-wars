@@ -146,3 +146,64 @@ document.body.innerHTML += "</br>" + century(1705) + "</br>";
 document.body.innerHTML += "</br>" + century(1900) + "</br>";
 document.body.innerHTML += "</br>" + century(1601) + "</br>";
 document.body.innerHTML += "</br>" + century(2000) + "</br>";
+
+/**  KATA ⮕ Remove Duplicate Words (7kyu)
+ *** Description:
+ *** Your task is to remove all duplicate words from a string,
+ *** leaving only single (first) words entries.
+ ***
+ **/
+
+//Example:
+
+//Input:
+//'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+
+//Output:
+//'alpha beta gamma delta'
+
+/* possible solutions */
+//const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
+
+//const removeDuplicateWords = s => {
+//  const set = new Set(s.split(' '));
+//  return Array.from(set).join(' ');
+//}
+
+//const removeDuplicateWords = s => {
+//  let arr = s.split(" ");
+//  let sFiltered = [];
+//
+//  for (let str of arr) if (!sFiltered.includes(str)) sFiltered.push(str)
+//
+//  return sFiltered.join(" ")
+//}
+
+/* DMG's Solution */
+
+// 1. Create an array of all words, by splitting the sting on spaces.
+//    a. Look into using .split?
+// 2. Create an array of unique words
+// 3. Loop over the array of all words
+//    a. Increment an index variable to keep track where we are in the array
+// 4. check the array of unique words to see if it ALREADY includes the current word.
+// 5. If it does not, add it to the array of unique words
+// 6. If it does, skip this word
+// 7. Join the unique words, separating by spacves.
+//    a. Look into using .join()
+
+function removeDuplicateWords(s) {
+  const allWords = s.split(" ");
+  const uniqueWords = [];
+
+  let index = 0;
+  while (index < allWords.length) {
+    const currentWord = allWords[index];
+    if (!uniqueWords.includes(currentWord)) {
+      uniqueWords.push(currentWord);
+    }
+    index += 1;
+  }
+  const result = uniqueWords.join(" ");
+  return result;
+}
