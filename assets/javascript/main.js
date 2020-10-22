@@ -537,3 +537,75 @@ function basicOp(operation, value1, value2) {
 //  };
 //  return cases[operation]
 //}
+
+/**  KATA ⮕ Thinkful - String Drills: Repeater (7kyu)
+ *** Description:
+ *** Write a function named repeater() that takes two arguments
+ *** (a string and a number), and returns a new string where the
+ *** input string is repeated that many times.
+ ***
+ **/
+//Example:
+//Repeater.repeat("a", 5)
+//should return
+//"aaaaa"
+
+function repeater(string, n) {
+  return string.repeat(n);
+}
+
+/**  KATA ⮕ MakeUpperCase (7kyu)
+ *** Description:
+ *** Write a function which converts the input string to uppercase.
+ ***
+ **/
+function makeUpperCase(str) {
+  return str.toUpperCase(str);
+}
+
+//function makeUpperCase(str) {
+//  let result = str.toUpperCase();
+//  return result;
+//}
+
+/**  KATA ⮕ Remove First and Last Character (8kyu)
+ *** Description:
+ *** It's pretty straightforward. Your goal is to create a function that
+ *** removes the first and last characters of a string.
+ *** You're given one parameter, the original string.
+ *** You don't have to worry with strings with less than two characters.
+ ***
+ **/
+function removeChar(str) {
+  return (str = str.substr(1).slice(0, -1));
+}
+
+//function removeChar(str) {
+//  return str.slice(1, -1);
+//}
+
+//function removeChar(str){
+//  return str.substring(1, str.length-1);
+// };
+
+//function removeChar(str){
+//   str1 = str.split('');
+//   str1.shift();
+//   str1.pop();
+//   return str1.join('');
+
+/**  KATA ⮕ Sentence Smash (8kyu)
+ *** Description:
+ *** Write a function that takes an array of words and smashes them
+ *** together into a sentence and returns the sentence. You can ignore
+ *** any need to sanitize words or add punctuation, but you should add
+ *** spaces between each word. Be careful, there shouldn't be a
+ *** space at the beginning or the end of the sentence!
+ ***
+ **/
+//Example
+//['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+// Smash Words
+function smash(words) {
+  return words.join(" ");
+}
