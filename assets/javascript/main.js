@@ -207,3 +207,333 @@ function removeDuplicateWords(s) {
   const result = uniqueWords.join(" ");
   return result;
 }
+
+/**  KATA ⮕ Grasshopper-Debug sayHello (8kyu)
+ *** Description:
+ *** The starship Enterprise has run into some problem when creating
+ *** a program to greet everyone as they come aboard. It is your job
+ *** to fix the code and get the program working again!
+ ***
+ **/
+
+//Example output:
+//Hello, Mr. Spock
+function sayHello(name) {
+  return "Hello" + ", " + name;
+}
+
+//function sayHello (name) {
+//  return 'Hello, ' +  name;
+//}
+
+//const sayHello = name => `Hello, ${name}`;
+
+//function sayHello(name) {
+//  return `Hello, ${name}`
+//}
+
+//function sayHello (name) {
+//  var fullString = "Hello, " + name;
+//  return fullString;
+//}
+
+/**  KATA ⮕ Grasshopper-Function syntax debugging (8kyu)
+ *** Description:
+ *** A student was working on a function and made some syntax mistakes
+ *** while coding. Help them find their mistakes and fix them.
+ ***
+ **/
+function main(verb, noun) {
+  return verb + noun;
+}
+
+/**  KATA ⮕ Grasshopper- Basic Function Fixer (8kyu)
+ *** Description:
+ *** I created this function to add five to any number that was
+ *** passed in to it and return the new value. It doesn't throw any
+ *** errors but it returns the wrong number.
+ ***
+ *** Can you help me fix the function?
+ ***
+ **/
+function addFive(num) {
+  var total = num + 5;
+  return total;
+}
+
+/**  KATA ⮕ Beginner Series #1 School Paperwork (8kyu)
+ *** Description:
+ *** Your classmates asked you to copy some paperwork for them.
+ *** You know that there are 'n' classmates and the paperwork has 'm' pages.
+ *** Your task is to calculate how many blank pages do you need.
+ ***
+ **/
+//Example:
+//paperwork(5, 5) == 25
+
+function paperwork(n, m) {
+  let result = n * m;
+  if (n < 0 || m < 0) {
+    return 0;
+  }
+  return result;
+}
+
+//function paperwork(n, m) {
+//  return n > 0 && m > 0 ? n * m : 0
+//}
+
+//function paperwork(n, m) {
+//  return n < 0 || m < 0 ? 0 : n * m;
+//}
+
+//function paperwork(n, m) {
+//  if (m < 0 || n < 0) {
+//    return 0;
+//  }
+//  return m * n;
+//}
+
+/**  KATA ⮕ Jenny's secret message (8kyu)
+ *** Description:
+ *** Jenny has written a function that returns a greeting for a user.
+ *** However, she's in love with Johnny, and would like to greet him
+ *** slightly different. She added a special case to her function,
+ *** but she made a mistake.
+ ***
+ *** Can you help her?
+ ***
+ **/
+function greet(name) {
+  if (name === "Johnny") {
+    return "Hello, my love!";
+  } else {
+    return "Hello, " + name + "!";
+  }
+}
+
+/**  KATA ⮕ Grasshopper-Combine strings (8kyu)
+ *** Description:
+ *** Create a function named combineNames that accepts two parameters
+ *** (first and last name). The function should return the full name.
+ ***
+ **/
+//Example:
+//combineNames('James', 'Stevens')
+
+//returns:
+//'James Stevens'
+function combineNames(firstName, lastName) {
+  let result = firstName + " " + lastName;
+  return result;
+}
+
+/**  KATA ⮕  If/else syntax debug (8kyu)
+ *** Description:
+ *** While making a game, your partner, Greg, decided to create a function to
+ *** check if the user is still alive called checkAlive/CheckAlive/check_alive.
+ *** Unfortunately, Greg made some errors while creating the function.
+ ***
+ *** checkAlive/CheckAlive/check_alive should return true if the player's
+ *** health is greater than 0 or false if it is 0 or below.
+ ***
+ *** The function receives one parameter health which will always
+ *** be a whole number between -10 and 10.
+ ***
+ **/
+function checkAlive(health) {
+  if (health > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**  KATA ⮕ Grasshopper-Variable Assignment Debug (8kyu)
+ *** Description:
+ *** Fix the variables assigments so that this code stores the string
+ *** 'devLab' in the variable name.
+ ***
+ **/
+let a = "dev";
+let b = "Lab";
+
+let name = a + b;
+
+/**  KATA ⮕ Grasshopper- Messi Goals (8kyu)
+ *** Description:
+ *** Use variables to find the sum of the goals Messi scored in 3 competitions
+ ***
+ ***
+ **/
+//Information
+//Messi goal scoring statistics:
+
+//Competition	     Goals
+//La Liga	          43
+//Champions League	10
+//Copa del Rey	     5
+//Task
+//1) Create these three variables and store the appropriate values using the
+// table above:
+
+//laLigaGoals
+//championsLeagueGoals
+//copaDelReyGoals
+
+//2) Create a fourth variable named totalGoals that stores
+// the sum of all of Messi's goals for this year.
+
+let laLigaGoals = 43;
+let championsLeagueGoals = 10;
+let copaDelReyGoals = 5;
+
+let totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+/**  KATA ⮕ Grasshopper-Order of operations (8kyu)
+ *** Description:
+ *** You are running the calculation 2 + 2 * 2 + 2 * 2 and expect to get
+ *** the answer 32 but instead the function keeps returning 10. Fix the
+ *** function to make it return 32 without changing the number or the operators.
+ ***
+ **/
+// parenthesis, exponents, multiplication/division, addition/subtraction
+function orderOperations() {
+  return (2 + 2) * (2 + 2) * 2;
+}
+
+/**  KATA ⮕ Keep Hydrated! (8kyu)
+ *** Description:
+ *** Nathan loves cycling.
+ *** Because Nathan knows it is important to stay hydrated, he drinks
+ *** 0.5 litres of water per hour of cycling.
+ *** You get given the time in hours and you need to return the number
+ *** of litres Nathan will drink, rounded to the smallest value.
+ ***
+ **/
+//For example:
+//time = 3 ----> litres = 1
+//time = 6.7---> litres = 3
+//time = 11.8--> litres = 5
+
+function litres(time) {
+  let hydro = 0.5;
+  return Math.floor(hydro * time);
+}
+
+/**  KATA ⮕ Is it even? (8kyu)
+ *** Description:
+ *** In this Kata we are passing a number (n) into a function.
+ *** Your code will determine if the number passed is even (or not).
+ *** The function needs to return either a true or false.
+ *** Numbers may be positive or negative, integers or floats.
+ *** Floats are considered UNeven for this kata.
+ ***
+ **/
+//function testEven(n) {
+//  n = Number(n);
+//  return n === 0 || !!(n && !(n % 2));
+//}
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+/**  KATA ⮕ Return Negative (8kyu)
+ *** Description:
+ *** In this simple assignment you are given a number
+ *** and have to make it negative. But maybe the number is already negative?
+ ***
+ **/
+
+//Example:
+//makeNegative(1); // return -1
+//makeNegative(-5); // return -5
+//makeNegative(0); // return 0
+//makeNegative(0.12); // return -0.12
+
+function makeNegative(num) {
+  if (num > 0) {
+    return num * -1;
+  } else if (num === 0) {
+    return 0;
+  } else {
+    return num;
+  }
+}
+
+//function makeNegative(num) {
+//  return -Math.abs(num);
+//}
+
+/**  KATA ⮕ Opposite number (8kyu)
+ *** Description:
+ *** Very simple, given a number, find its opposite.
+ ***
+ **/
+
+//Examples:
+//  1 : -1
+// 14 : -14
+//-34 :  34
+function opposite(number) {
+  return number * -1;
+}
+
+/**  KATA ⮕ Basic Mathematical Operations (8kyu)
+ *** Description:
+ *** Your task is to create a function that does four basic mathematical
+ *** operations.
+ *** The function should take three arguments - operation(string/char),
+ *** value1(number), value2(number).
+ *** The function should return result of numbers after applying the
+ *** chosen operation.
+ ***
+ **/
+//Examples
+//basicOp('+', 4, 7)         // Output: 11
+//basicOp('-', 15, 18)       // Output: -3
+//basicOp('*', 5, 5)         // Output: 25
+//basicOp('/', 49, 7)        // Output: 7
+
+function basicOp(operation, value1, value2) {
+  if (operation === "+") {
+    return value1 + value2;
+  } else if (operation === "-") {
+    return value1 - value2;
+  } else if (operation === "*") {
+    return value1 * value2;
+  } else if (operation === "/") {
+    return value1 / value2;
+  }
+}
+
+//function basicOp(operation, value1, value2) {
+//  switch (operation) {
+//      case '+':
+//          return value1 + value2;
+//      case '-':
+//          return value1 - value2;
+//      case '*':
+//          return value1 * value2;
+//      case '/':
+//          return value1 / value2;
+//      default:
+//          return 0;
+//  }
+//}
+
+//function basicOp(o, a, b) {
+//  return eval(a+o+b);
+//}
+
+//function basicOp(operation, value1, value2)
+//{
+//  let cases = {
+//    '+': value1 + value2,
+//    '-': value1 - value2,
+//    '*': value1 * value2,
+//    '/': value1 / value2
+//  };
+//  return cases[operation]
+//}
