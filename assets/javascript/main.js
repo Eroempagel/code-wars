@@ -609,3 +609,134 @@ function removeChar(str) {
 function smash(words) {
   return words.join(" ");
 }
+
+/**  KATA ⮕ Grasshopper - Summation (8kyu)
+ *** Description:
+ *** Write a program that finds the summation of every number from 1 to num.
+ *** The number will always be a positive integer greater than 0.
+ ***
+ **/
+//For example:
+//summation(2) -> 3
+//1 + 2
+//summation(8) -> 36
+//1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+let summation = function (num) {
+  let i = 0;
+  let sum = 0;
+  while (i <= num) {
+    sum += i;
+    i++;
+  }
+  return sum;
+};
+
+/**  KATA ⮕ Sum of positive (8kyu)
+ *** Description:
+ *** You get an array of numbers, return the sum of all of the positives ones.
+ ***
+ ***
+ **/
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+function positiveSum(arr) {
+  let i = 0;
+  let sum = 0;
+  while (i < arr.length) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+    i++;
+  }
+  return sum;
+}
+
+/**  KATA ⮕ Grasshopper - Array Mean (8kyu)
+ *** Description:
+ *** Find the mean (average) of a list of numbers in an array.
+ ***
+ ***
+ **/
+// Information
+// To find the mean (average) of a set of numbers add all of the numbers
+// together and divide by the number of values in the list.
+// For an example list of 1, 3, 5, 7
+// 1. Add all of the numbers
+// 1+3+5+7 = 16
+// 2. Divide by the number of values in the list. In this example there
+// are 4 numbers in the list.
+// 16/4 = 4
+// 3. The mean (or average) of this list is 4
+//var findAverage = function (nums) {
+//  var sum = nums.reduce(function (a, b) {
+//    return a + b;
+//  });
+
+//  var avarage = sum / nums.length;
+//  return avarage;
+//};
+
+//function findAverage (nums) {
+//  let sum = 0;
+//  let index = 0;
+//  for(let i = 0; i < nums.length; i++){
+//    sum += nums[i];
+//    index++;
+//  }
+//  return (index >= 1)? sum / index : sum;
+//}
+
+function findAverage(nums) {
+  let i = 0;
+  let sum = 0;
+  let ave = 0;
+  while (i < nums.length) {
+    sum += arr[i];
+    i++;
+  }
+  ave = sum / nums.length;
+  return ave;
+}
+
+/**  KATA ⮕ No oddities here (7kyu)
+ *** Description:
+ *** Write a small function that returns the values of an array that are not odd.
+ *** All values in the array will be integers.
+ *** Return the good values in the order they are given.
+ ***
+ **/
+//function noOdds( values )
+function noOdds(values) {
+  let i = 0;
+  let arr = [];
+  while (i < values.length) {
+    if (values[i] % 2 === 0) {
+      arr.push(values[i]);
+    }
+    i++;
+  }
+  return arr;
+}
+
+/**  KATA ⮕ Shortest Word (7kyu)
+ *** Description:
+ *** Simple, given a string of words, return the length of the shortest word(s).
+ *** String will never be empty and you do not need to account for
+ *** different data types.
+ ***
+ **/
+function findShort(s) {
+  let words = s.split(" ");
+  let shortestWord = "supercalifragilisticixpyalidocious";
+  let i = 0;
+  let word = words[i];
+
+  while (i < words.length) {
+    if (word.length < shortestWord.length) {
+      shortestWord = word;
+    }
+    i++;
+  }
+  return shortestWord.length;
+}
