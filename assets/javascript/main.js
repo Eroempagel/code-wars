@@ -726,15 +726,18 @@ function noOdds(values) {
  *** different data types.
  ***
  **/
-function findShort(s) {
-  let words = s.split(" ");
-  let shortestWord = "supercalifragilisticixpyalidocious";
-  let i = 0;
-  let word = words[i];
+//function findShort(s){
+//  return Math.min(...s.split(" ").map (s => s.length));
+//}
 
-  while (i < words.length) {
-    if (word.length < shortestWord.length) {
-      shortestWord = word;
+function findShort(s) {
+  let arr = s.split(" ");
+  let shortestWord = arr[0];
+  let i = 0;
+
+  while (i < arr.length) {
+    if (arr[i].length < shortestWord.length) {
+      shortestWord = arr[i];
     }
     i++;
   }
